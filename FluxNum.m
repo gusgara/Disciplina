@@ -1,4 +1,4 @@
-function [fl,fr,alpha]=FluxNum(flux,dflux,sl,sr)
+function [fl,fr]=FluxNum(flux,dflux,sl,sr)
 A = find((sr-sl)<10^-10);
 alpha(1:length(sl)) = (flux(sr)-flux(sl))/(sr-sl);
 alpha(A) = dflux(sl(A));

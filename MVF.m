@@ -14,7 +14,7 @@ sl(2:length(s)+1)=s; sr(1:length(s))=s;
 sl(1)=s(2); sr(length(s)+1)=s(length(s));
 for n=0:dt:tmax
     flux = @(s) (s.^2)/2; dflux =@(s) s;
-    [fl,fr,alpha]=FluxNum(flux,dflux,sl,sr);
+    [fl,fr]=FluxNum(flux,dflux,sl,sr);
     
     sn(1:ne) = s(1:ne) -(dt/h)*(fr(1:ne)-fl(1:ne));
     t = t + dt; s =sn; 
