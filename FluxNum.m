@@ -3,8 +3,7 @@ A = find((sr-sl)<10^-10);
 alpha(1:length(sl)) = (flux(sr)-flux(sl))/(sr-sl);
 alpha(A) = dflux(sl(A));
 
-i=1:length(sl);
-f(i)=0.5*(flux(sr(i)) + flux(sl(i)) - abs(alpha(i)).*(sr(i)-sl(i)));
+f = 0.5*(flux(sr) + flux(sl) - abs(alpha).*(sr -sl));
 
 fr=f(2:end);fl=f(1:end-1);
 
