@@ -1,7 +1,7 @@
 % MVF
 clear; close all; clc;
 
-t = 0; tmax = 1; CFL = 0.9;
+t = 0; tmax = 0.4; CFL = 0.9;
 xl = -1; xr = 1; ne = 200;
 h = (xr - xl)/ne; 
 x = xl:h:xr; xe = x(1)+h/2:h:x(end)-h/2;
